@@ -15,7 +15,7 @@
 				alt="greenLine">
 		</div>
 		<div class="first-card">
-			<p>직접 체험하며 농사가 얼마나 즐거운지 저희와 함께 배워보세요!</p>
+			<p>직접 체험하며 농사가 얼마나 즐거운지 저희와 함께 배워보세요!!!!</p>
 			<div class="card">
 				<h3>농지대여</h3>
 				<img

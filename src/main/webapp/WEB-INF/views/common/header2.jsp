@@ -60,8 +60,6 @@
 			</div>
 		</div>
 	</header>
-	<img src="${pageContext.request.contextPath}/resources/images/v29_3.png" class="navimg" alt="Header Image">
-
 	
 	 <script>
 		/* document.querySelector("#memberEnroll").addEventListener('click', (e)=> {
