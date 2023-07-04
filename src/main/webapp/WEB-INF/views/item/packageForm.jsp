@@ -4,46 +4,125 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>    
 
+<head>
+	<link href="${pageContext.request.contextPath}/resources/css/package.css?v=<%System.currentTimeMillis(); %>" rel="stylesheet" />
+</head>
+
 <jsp:include page="/WEB-INF/views/common/header.jsp">
 	<jsp:param value="packagemain" name="title" />
 </jsp:include>
-
-<div class="container">
-	
-	<form action="${pageContext.request.contextPath}/item/packageList.bo" method="get">
-		<aside>
-			<h3>main</h3>
-			<div class="sidebar">
-				<!-- 	패키지 메인으로 돌아가는 코드
-				I PCA가 1인 리스트 모두 출력
-				클릭하면 PACKGEFORM이 우측에 페이지에 출력됨. -->
-				<ul>
-					<li><a href=#>•감기 탈출 패키지</a></li>
-					<li><a href=#>•혈당 관리 패키지</a></li>
-					<li><a href=#>•당뇨 관리 패키지</a></li>
-					<li><a href=#>•집중 관리 프로잭트</a></li>
-					<li><a href=#>•심혈관계질환</a></li>
-					<li><a href=#>•하루 600Kcal A</a></li>
-					<li><a href=#>•하루 600Kcal B</a></li>
-					<li>
-						<a href="${pageContext.request.contextPath}/item/packageForm.bo">•packageForm 가보기</a>
-					</li>
-					
-				</ul>
-			</div>
-		</aside>
-	</form>
+<div class="packgae-logo">
+	<div class="packgae-logo-text">
+		<p id="text1">베지팜이 엄선한 질병 • 건강 기준에 맞춘</p>
+		<br>
+		<p id="text2">건강 패키지</p>
+	</div>
 </div>
-<div class="container"> 
-	<main class="main">
-		<div class="packageList.jsp">
-		<%-- 	<img class="packgae-logo" src="${pageContext.request.contextPath}/resources/images/pexels-photo-5677794.jpeg" alt="packgae-logo">
-   		 --%>	
-			<p>건강을 위한 목적과 필요에 따라 골라 먹는</p>
-			<p>맛있는 야채</p>
-			<p>질환별 추천 패키지입니다.</p>
-			<p>건강한 텃밭에서 자란 채소들로 여러분의 식단을 책임집니다.</p>
+
+<div class="container" style="width: 1000px;">
+	<main class="pakge-main">
+
+		<div id="package-menu">
+			
+			<div class="package-card">
+				<a href="${pageContext.request.contextPath}/item/pacForm.bo?INo=1" >
+				
+					<h2>감기 탈출 패키지</h2>
+				</a>
+			</div>
+
+			<div class="package-card">
+				<a href="${pageContext.request.contextPath}/item/pacForm.bo?INo=2">
+					<h2>혈당 관리 패키지</h2>
+				</a>
+			</div>
+
+			<div class="package-card">
+				<a href="${pageContext.request.contextPath}/item/pacForm.bo?INo=3">		
+					<h2>당뇨 관리 패키지</h2>
+				</a>
+			</div>
+
+			<div class="package-card">
+				<a href="${pageContext.request.contextPath}/item/pacForm.bo?INo=4">
+					<h2>심혈관계질환</h2>
+				</a>
+			</div>
+		</div>
+		<p>HOME > 패키지 > ${pacForm.IName}</p>
+
+		<div id="package-select">
+			<div id="select-img">
+				<img src="${pageContext.request.contextPath}/resources/images/${pacForm.ILogo}" alt="logo">
+			</div>
+
+			<div class="info-area">
+				<div class="info-area_name">
+					<h2>${pacForm.IName}</h2>
+				</div>
+
+				<div class="info-area_price">
+					<h2>${pacForm.IPrice}원</h2>
+				</div>
+
+				<div class="info-area_farmBox">
+					<div class="info-area_title">
+						<span>판매 농가</span>
+					</div>
+					<div class="info-area_farm">
+						<h2>${pacForm.ILocal}</h2>
+					</div>
+				</div>
+				<div class="item-sulyangBox">
+					<form name="" action="" method="post">
+						<div class="info-area_title">
+							<span>수량</span>
+						</div>
+						<div class="info-area_number">
+							<input type="number" name="item-sulyang" min="0" max="${pacForm.ICount}" value="1">
+						</div>
+				</div>
+				
+					<div class="info-area_total">
+						<span>총 상품금액</span>
+						<span class="total_price"> 
+							<span>원</span>
+						</span>
+					</div>
+					<div class="info-area_btn">
+						<button id="info-area_btn">장바구니</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="info-area_content">
+			<img src="${pageContext.request.contextPath}/resources/images/${pacForm.IContent}" alt="logo">
 		</div>
 	</main>
 </div>
+<!-- 			<table id="info-area-t">
+					<tr>
+						<td class="info-area_name"><h2>상품명</h2></td>
+						<td><h2>감기탈출 패키지</h2></td>
+					</tr>
+					<tr>
+						<td class="info-area_price" colspan="2"><h2>55,000원</h2></td>
+					</tr>
+					<tr>
+						<td class="info-area_content" colspan="2"><h2>맛난 감자감자 냠냠</h2></td>
+					</tr>
+					<tr>
+						<td class="info-area_farm"><h2>판매 농가</h2></td>
+						<td><h2>뿡뿡이네</h2></td>
+					</tr>
+					<tr>
+						<td class="info-area_number"><h2>수량</h2></td>
+						<td><input type="number" min="1" max="55" value="1"></td>
+					</tr>
+		
+					</table>
+	 -->
+
+
+
 <jsp:include page="/WEB-INF/views/common/footer.jsp" />

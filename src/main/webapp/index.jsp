@@ -7,6 +7,9 @@
 <jsp:include page="/WEB-INF/views/common/header.jsp">
 	<jsp:param value="vegform" name="title" />
 </jsp:include>
+
+	<img src="${pageContext.request.contextPath}/resources/images/v29_3.png" class="navimg" alt="Header Image">
+
 <div class="container">
 	<div class="first-page">
 		<div class="greenLine">

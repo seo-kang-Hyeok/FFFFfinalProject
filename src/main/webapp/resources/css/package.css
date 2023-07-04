@@ -1,0 +1,215 @@
+	justify-content: center;
+	align-items: center;
+
+/*package-------------------------------------*/
+.package-main h3 {
+	text-align: center;
+	margin: 10px;
+}
+
+.packgae-logo {
+	background-image: url(../images/papapapapa.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.packgae-logo>.packgae-logo-text> p{
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+.packgae-logo>.packgae-logo-text> #text1{
+	font-size: 30px;
+}
+.packgae-logo>.packgae-logo-text> #text2{
+	font-size: 80px;
+}
+.package-card {
+	width: 260px;
+	display: inline-block;
+    margin: 5px;
+    padding: 10px;
+	border-radius: 20px;
+	background-color: white;
+	box-shadow:1px 1px 1px 1px;
+}
+.package-card>img {
+	width: 250px;
+	height: 250px;
+	border-radius: 20px;
+	display:block;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+.package-List  {
+	margin-top: -150px;
+}
+.package-card-but {
+    width: 120px;
+    line-height: 48px;
+    font-size: 15px;
+    background: #f5f5f5;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    align-items : center;
+   	margin: auto;  	
+   	margin-bottom:-10px;
+   	justify-content: center;
+	box-shadow:1px 1px 1px 1px;
+}
+
+.package-card h2 {
+	color: #F07D00;
+	text-align: center;
+}
+.package-card>p {
+	text-align: right;
+	size: 5px;
+	margin: 10px;
+	font-weight: bold;
+}`
+.package-card-but>a {
+    color: #999;
+    size: 5px; 	
+	font-weight: bold;
+}
+#package-explanation {
+	width: 1200px;
+	text-align: center;
+}
+
+#explanation-title {
+	font-size: 60px;
+	font-weight: bold;
+	height: 700px;
+	margin:  auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.explanation-content>p {
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+	line-height: 2; 
+	
+}
+.explanation-content {
+	background-image: url(../images/pexels-ksenia-chernaya-3952051.jpg);
+	background-size: cover; /* 이미지를 컨테이너에 맞게 조절합니다. */
+	background-position: center; /* 이미지를 가운데 정렬합니다. */
+	width: 1200px; /* 원하는 높이로 조절해주세요. */
+	height: 1800px; /* 원하는 높이로 조절해주세요. */
+	margin-bottom: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px ;
+}
+#package-menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: -100px 0 50px 0; 	
+}
+
+#package-select {
+	width: 1000px;
+	height: 500px;
+	margin: 50px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#select-img{
+	width: 500px;
+	height: 500px;
+}
+#select-img>img{
+	width: 90%;
+	height: 90%;
+	margin: 5%;
+    border-radius: 20px 20px 20px 20px;
+}
+.info-area {
+	width: 450px;
+	height: 450px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.info-area span {	
+	font-size: 15px;
+    color: #3D3D3D;
+    font-weight: bold;
+}
+.info-area_name{
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.info-area_price {
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+.info-area_title {
+	width: 100px;
+	display: inline-block;
+}
+.info-area_farmBox {
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;	
+}
+.info-area_farm {
+	width:250px;
+	display: inline-block;
+}
+.item-sulyangBox {
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;	
+	
+}
+.info-area_total {
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+	display: inline-block;
+	width: 100%;
+}
+.info-area_number{
+	display: inline-block;	
+}	
+.total_price {
+	display: inline-block;
+	text-align: right;
+	
+}
+.info-area_btn{
+	
+}
+.info-area_btn {
+	margin-top : 30px;
+	display: block;
+	text-align: center;
+	width: 450px;
+}
+#info-area_btn {
+	
+	width : 200px;
+	height : 70px;
+    background: #918c00;
+    border: 1px solid #918c00;
+    color: #FFF;
+}
+
+.info-area_content {
+	display: block;
+	height:6000px; 
+	
+}

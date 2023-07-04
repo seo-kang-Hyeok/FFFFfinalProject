@@ -9,9 +9,12 @@ import com.kh.finalProject.item.model.vo.Item;
 @Mapper
 public interface ItemDao {
 
-	Item selectOnePackages();
+	List<Item> selectPacList();
 
-	
-//	List<Item> selectPackageList();
-	
+	Item selectOnePac(int INo);
+
+	//삼품페이지 리스트 -->
+	List<Item> selectitemList();
+
+		
 }

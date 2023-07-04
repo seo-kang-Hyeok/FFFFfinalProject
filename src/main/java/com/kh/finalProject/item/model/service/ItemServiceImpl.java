@@ -16,13 +16,20 @@ public class ItemServiceImpl implements ItemService {
 	private ItemDao itemDao;
 	
 	@Override
-	public Item selectOnePackages() {
-		
-		return itemDao.selectOnePackages();
+	public List<Item> selectPacList() {
+		return  itemDao.selectPacList();
 	}
 
-//	@Autowire
-//	private ItemDao itemDao;
+	@Override
+	public Item selectOnePac(int INo) {
+		return itemDao.selectOnePac(INo);
+	}
+
+	//상품페이지 리스트 불러오기
+	@Override
+	public List<Item> selectitemList() {
+		return  itemDao.selectitemList();
+	}
 
 
 }

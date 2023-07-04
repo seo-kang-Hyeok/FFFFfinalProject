@@ -26,32 +26,30 @@ public class ItemController {
 	@Autowired
 	private ItemService itemService;
 		
-	/*
-	 * @GetMapping("/packageList.bo") public String packageList(Model model) {
-	 * List<Item> packageList = itemService.selectPackageList(); for (Item item :
-	 * packageList) { System.out.println(item.getDName());
-	 * System.out.println(item.getIContent()); System.out.println(item.getICount());
-	 * // 나머지 필드에 대해서도 출력 } model.addAttribute("packageList", packageList); return
-	 * "item/packagemain"; }
-	 */
-	@GetMapping("/packageList2.bo")
-	public String packageList(Model model) {
-		Item result = itemService.selectOnePackages();
-		model.addAttribute("result", result);
-		System.out.println("result=" + result);
+
+	
+	@GetMapping("/paclist.bo")
+	public String paclist(Model model) {
+		List<Item> paclist = itemService.selectPacList();
+		System.out.println("paclist =" + paclist);
+		model.addAttribute("paclist", paclist );
 		return "/item/packageList2";
 	}
-	@GetMapping("/packageForm.bo")
-	public void packageForm() {}
 	
-
-/*		
-	@GetMapping("/packageList.bo")
-	public String packageList(PackageList packageList) {
-		int result = ItemService.selectPackageList(packageList);
-		return "item/packagemain";
+	@GetMapping("pacForm.bo")
+	public String pacForm(@RequestParam int INo, Model model) {
+		Item pacForm = itemService.selectOnePac(INo);
+		model.addAttribute("pacForm", pacForm);
+		return "/item/packageForm";
 	}
-*/
+
+	@GetMapping("/itemlist.bo")
+	public String itemlist(Model model) {
+		List<Item> itemlist = itemService.selectitemList();
+		System.out.println("itemlist =" + itemlist);
+		model.addAttribute("itemlist", itemlist);
+		return "/item/itemList";
+	}
 	
 	
 	

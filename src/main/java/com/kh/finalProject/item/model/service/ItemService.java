@@ -6,7 +6,12 @@ import com.kh.finalProject.item.model.vo.Item;
 
 public interface ItemService {
 
-	Item selectOnePackages();
+	List<Item> selectPacList();
 
-//	List<Item> selectPackageList();
+	Item selectOnePac(int INo);
+
+	List<Item> selectitemList();
+
+	
+	//	List<Item> selectPackageList();
 }
