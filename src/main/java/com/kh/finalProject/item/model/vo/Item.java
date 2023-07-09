@@ -10,13 +10,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Item {
-	private int INo;
-	private String IName;
-	private int IPrice;
-	private String IContent;
-	private String ILocal;
-	private int ICount;
-	private int IPac;
-	private String ILogo;
-
+	private int itemNo;
+	private String itemSector;
+	private String itemName;
+	private int itemPrice;
+	private String itemContent;
+	private String itemLocal;
+	private int itemCount;
+	private int itemPac;
+	private String itemLogo;
 }

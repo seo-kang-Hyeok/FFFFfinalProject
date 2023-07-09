@@ -13,8 +13,22 @@ public interface ItemDao {
 
 	Item selectOnePac(int INo);
 
-	//삼품페이지 리스트 -->
+	//상품 카테고리별 페이지 리스트 -->
 	List<Item> selectitemList();
+
+	List<Item> findlist1();
+
+	List<Item> findlist2();
+
+	List<Item> findlist3();
+
+	Item selectOneitem(int INo);
+
+	List<Item> findItemsByCategory(String category);
+
+	int insertItem(Item item);
+
+	void deleteItem(int itemNo);
 
 		
 }

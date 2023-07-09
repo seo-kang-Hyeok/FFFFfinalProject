@@ -4,34 +4,37 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 
+
+<head>
+<link href="${pageContext.request.contextPath}/resources/css/item.css?v=<%System.currentTimeMillis(); %>" rel="stylesheet" />
+</head>
+
 <jsp:include page="/WEB-INF/views/common/header.jsp">
 	<jsp:param value="packagemain" name="title" />
 </jsp:include>  
-<img src="${pageContext.request.contextPath}/resources/images/v29_3.png" class="navimg" alt="Header Image">
 
-<div class="container" style="width: 1200px;"> 
-	<aside>
-		<div class="sidebar">
-			<ul>
-				<li><a href=#>•곡류</a></li>
-				<li><a href=#>•깨</a></li>
-				<li><a href=#>•콩</a></li>
-				<li><a href=#>•과일</a></li>
-				<li><a href=#>•건과</a></li>
-				<li><a href=#>•견과</a></li>
-				<li><a href=#>•나물</a></li>
-				<li><a href=#>•버섯</a></li>
-			</ul>
-		</div>
-	</aside>
+<div class="item-logo">
+	<div class="item-logo-text">
+		<p id="text1">베지팜은 파트너 농가와 함께 합니다.</p>
+	</div>
+</div>
+
+<div class="container" style="width: 1200px"> 
+<jsp:include page="/WEB-INF/views/item/sidebar.jsp">
+	<jsp:param value="packagemain" name="title" />
+</jsp:include>  
 	<main class="itemList-main">	
+		<button class="insert-btn" onclick="location.href='${pageContext.request.contextPath}/item/insertList.bo'">글쓰기</button>
 		<c:forEach items="${itemlist}" var="item">
-			<div class="card">
-				<img src="${pageContext.request.contextPath}/resources/images/itemlogo/${item.ILogo}" alt="logo"> 
-				<h3>${item.IName}</h3>
-				<a href="${pageContext.request.contextPath}/item/itemForm.bo?INo=${pac.INo}" >${item.IPrice}원</a>
-			</div>
+			<a href="${pageContext.request.contextPath}/item/itemForm.bo?INo=${item.itemNo}" >
+				<div class="card">
+					<img src="${pageContext.request.contextPath}/resources/images/itemlogo/${item.itemLogo}" alt="logo"> 
+					<h5>${item.itemName}</h5>
+					<p>${item.itemLocal}</p>
+					<p><fmt:formatNumber value="${item.itemPrice}" pattern="#,###"/>원</p>
+						
+				</div>
+			</a>	
 		</c:forEach>
 	</main>
 </div>
-<jsp:include page="/WEB-INF/views/common/footer.jsp" />

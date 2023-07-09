@@ -32,7 +32,7 @@
          		</c:if>
          		<a>|</a>
          		<c:if test="${not empty loginMember}">
-	            	<a href="#">장바구니</a>
+	            	<a href="${pageContext.request.contextPath}/cart/myCart.ca?memId=${loginMember.memId}" >장바구니</a>
 	             	<a>|</a>
              	</c:if>
              	<c:if test="${empty loginMember}">

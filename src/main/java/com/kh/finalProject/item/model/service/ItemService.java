@@ -12,6 +12,20 @@ public interface ItemService {
 
 	List<Item> selectitemList();
 
+	List<Item> findlist1();
+
+	List<Item> findlist2();
+
+	List<Item> findlist3();
+
+	Item selectOneitem(int INo);
+
+	List<Item> findItemsByCategory(String category);
+
+	int insertItem(Item item);
+
+	void deleteItem(int itemNo);
+
 	
 	//	List<Item> selectPackageList();
 }

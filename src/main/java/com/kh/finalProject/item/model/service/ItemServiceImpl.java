@@ -31,5 +31,39 @@ public class ItemServiceImpl implements ItemService {
 		return  itemDao.selectitemList();
 	}
 
+	@Override
+	public List<Item> findlist1() {
+		return itemDao.findlist1();
+	}
+
+	@Override
+	public List<Item> findlist2() {
+		return itemDao.findlist2();
+	}
+	@Override
+	public List<Item> findlist3() {
+		return itemDao.findlist3();
+	}
+
+	@Override
+	public Item selectOneitem(int INo) {
+		return itemDao.selectOneitem(INo);
+	}
+	//상품카테고리 자동 입력 테스트
+	@Override
+	public List<Item> findItemsByCategory(String category) {
+		return itemDao.findItemsByCategory(category);
+	}
+
+	@Override
+	public int insertItem(Item item) {
+		return itemDao.insertItem(item);
+	}
+
+	@Override
+	public void deleteItem(int itemNo) {
+		itemDao.deleteItem(itemNo);
+	}
+	
 
 }

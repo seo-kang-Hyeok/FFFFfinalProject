@@ -1,5 +1,3 @@
-	justify-content: center;
-	align-items: center;
 
 /*package-------------------------------------*/
 .package-main h3 {
@@ -118,7 +116,7 @@
 	align-items: center;
 	margin: -100px 0 50px 0; 	
 }
-
+/* 패키지선택파일 */
 #package-select {
 	width: 1000px;
 	height: 500px;
@@ -128,11 +126,13 @@
 	align-items: center;
 }
 
-#select-img{
+#pacSelect-img{
 	width: 500px;
 	height: 500px;
+	margin: 20px;
 }
-#select-img>img{
+
+#pacSelect-img>img{
 	width: 90%;
 	height: 90%;
 	margin: 5%;
@@ -146,11 +146,6 @@
 	align-items: flex-start;
 }
 
-.info-area span {	
-	font-size: 15px;
-    color: #3D3D3D;
-    font-weight: bold;
-}
 .info-area_name{
 	padding: 20px 0;
     border-bottom: 1px solid #ccc;
@@ -162,6 +157,7 @@
 .info-area_title {
 	width: 100px;
 	display: inline-block;
+	text-align: center;
 }
 .info-area_farmBox {
 	padding: 20px 0;
@@ -171,43 +167,63 @@
 	width:250px;
 	display: inline-block;
 }
+.info-area_farmBox {
+	padding: 20px 0;
+    border-bottom: 1px solid #ccc;	
+}
 .item-sulyangBox {
 	padding: 20px 0;
     border-bottom: 1px solid #ccc;	
-	
 }
+.item-sulyangBox>form {
+	width: 50px;
+	display: inline-block;
+	}
 .info-area_total {
 	padding: 20px 0;
     border-bottom: 1px solid #ccc;
 	display: inline-block;
-	width: 100%;
+	width: 80%;
 }
 .info-area_number{
 	display: inline-block;	
+	width: 250px;
 }	
-.total_price {
-	display: inline-block;
-	text-align: right;
-	
+
+.info-area_number>input{
+	width: 50px;
+ 	border: 0;
+ 	font-size: 30px;	
+}	
+
+/* 상품금액 상자 -----------------------------*/
+.info-area_priceBox{
+	height: 40px;
+	width:95%;
+    display: inline-block;
+    margin: auto;
+    padding: 20px;
+    text-align: right; 
 }
-.info-area_btn{
-	
+.info-area_priceBox>span{
+	width: 100px;	
+ 	border: 0;
+ 	font-size: 30px;
 }
+/* 장바구니 버튼---------------------------- */
 .info-area_btn {
-	margin-top : 30px;
 	display: block;
 	text-align: center;
-	width: 450px;
+	width: 100%;
 }
 #info-area_btn {
-	
-	width : 200px;
+	width : 100%;
 	height : 70px;
     background: #918c00;
     border: 1px solid #918c00;
     color: #FFF;
+    font-size: 20px;
 }
-
 .info-area_content {
 	display: block;
 	height:6000px; 

@@ -11,4 +11,8 @@ public interface MemberDao {
 
 	Member selectOneMember(String mId);
 
+	int checkPwd(String mPwd);
+
+	int changePwd(String memId, String memPwd);
+
 }
