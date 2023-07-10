@@ -8,7 +8,7 @@ public interface ItemService {
 
 	List<Item> selectPacList();
 
-	Item selectOnePac(int INo);
+	Item selectOnePac(int itemNo);
 
 	List<Item> selectitemList();
 
@@ -18,7 +18,7 @@ public interface ItemService {
 
 	List<Item> findlist3();
 
-	Item selectOneitem(int INo);
+	Item selectOneitem(int itemNo);
 
 	List<Item> findItemsByCategory(String category);
 

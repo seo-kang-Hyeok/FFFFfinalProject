@@ -27,18 +27,21 @@ public class ItemController {
 
 	@Autowired
 	private ItemService itemService;
-	
+	//패키지 리스트 페이지
 	@GetMapping("/paclist.bo")
 	public String paclist(Model model) {
 		List<Item> paclist = itemService.selectPacList();
-		System.out.println("paclist =" + paclist);
+		
 		model.addAttribute("paclist", paclist );
 		return "/item/packageList";
 	}
-	
+	//패키지 상품 페이지
 	@GetMapping("pacForm.bo")
-	public String pacForm(@RequestParam int INo, Model model) {
-		Item pacForm = itemService.selectOnePac(INo);
+	public String pacForm(@RequestParam int itemNo, Model model) {
+		Item pacForm = itemService.selectOnePac(itemNo);
+		List<Item> paclist = itemService.selectPacList();
+	
+		model.addAttribute("paclist", paclist);
 		model.addAttribute("pacForm", pacForm);
 		return "/item/package";
 	}
@@ -53,8 +56,8 @@ public class ItemController {
 	}
 
 	@GetMapping("itemForm.bo")
-	public String itemForm(@RequestParam int INo, Model model) {
-		Item itemForm = itemService.selectOneitem(INo);
+	public String itemForm(@RequestParam int itemNo, Model model) {
+		Item itemForm = itemService.selectOneitem(itemNo);
 		model.addAttribute("itemForm", itemForm);
 		return "/item/item";
 	}

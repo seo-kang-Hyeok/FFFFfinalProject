@@ -9,7 +9,7 @@
 	</resultMap>
 	<resultMap type="cartList" id="cartListMap"></resultMap>
 	
-	<insert id="inserCart">
+	<insert id="insertCart">
 	insert into
 	  cart
 	values (

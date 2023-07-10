@@ -11,7 +11,7 @@ public interface ItemDao {
 
 	List<Item> selectPacList();
 
-	Item selectOnePac(int INo);
+	Item selectOnePac(int itemNo);
 
 	//상품 카테고리별 페이지 리스트 -->
 	List<Item> selectitemList();
@@ -22,7 +22,7 @@ public interface ItemDao {
 
 	List<Item> findlist3();
 
-	Item selectOneitem(int INo);
+	Item selectOneitem(int itemNo);
 
 	List<Item> findItemsByCategory(String category);
 

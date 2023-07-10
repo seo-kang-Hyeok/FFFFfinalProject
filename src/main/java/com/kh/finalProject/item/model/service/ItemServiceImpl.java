@@ -21,8 +21,8 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public Item selectOnePac(int INo) {
-		return itemDao.selectOnePac(INo);
+	public Item selectOnePac(int itemNo) {
+		return itemDao.selectOnePac(itemNo);
 	}
 
 	//상품페이지 리스트 불러오기
@@ -46,8 +46,8 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public Item selectOneitem(int INo) {
-		return itemDao.selectOneitem(INo);
+	public Item selectOneitem(int itemNo) {
+		return itemDao.selectOneitem(itemNo);
 	}
 	//상품카테고리 자동 입력 테스트
 	@Override
