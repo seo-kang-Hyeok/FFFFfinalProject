@@ -17,8 +17,8 @@ public class CartServiceImpl implements CartService {
 	private CartDao cartDao;
 
 	@Override
-	public int inserCart(Cart cart) {
-		return cartDao.inserCart(cart);
+	public int insertCart(Cart cart) {
+		return cartDao.insertCart(cart);
 	}
 
 	@Override
@@ -31,6 +31,4 @@ public class CartServiceImpl implements CartService {
 		 cartDao.deleteCart(cartNo);
 		
 	}
-
-
 }

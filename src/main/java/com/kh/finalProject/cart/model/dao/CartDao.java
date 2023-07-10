@@ -11,7 +11,7 @@ import com.kh.finalProject.item.model.vo.Item;
 @Mapper
 public interface CartDao {
 
-	int inserCart(Cart cart);
+	int insertCart(Cart cart);
 
 	List<CartList> mycartList(String memId);
 

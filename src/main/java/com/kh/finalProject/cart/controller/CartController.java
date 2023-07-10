@@ -27,27 +27,26 @@ public class CartController {
 	private CartService cartService;
 
 	/*상품 장바구니 insert*/
-	@PostMapping("/inserCart.ca") 
-		public String inserCart(Cart cart,RedirectAttributes redirectAttr) {
-			int result = cartService.inserCart(cart);
+	@PostMapping("/insertCart.ca") 
+		public String insertCart(Cart cart,RedirectAttributes redirectAttr) {
+			int result = cartService.insertCart(cart);
 			redirectAttr.addFlashAttribute("msg", "정상적으로 저장했습니다.");
 			return "redirect:/item/itemlist.bo";
-	}
+		}
 	/*Pac 장바구니 insert*/
-	@PostMapping("/inserPacCart.ca") 
-	public String inserPacCart(Cart cart,RedirectAttributes redirectAttr) {
-		int result = cartService.inserCart(cart);
-		redirectAttr.addFlashAttribute("msg", "정상적으로 저장했습니다.");
-		return "redirect:/item/packageList";
-
-	}
+	@PostMapping("/insertPacCart.ca") 
+		public String insertPacCart(Cart cart,RedirectAttributes redirectAttr) {
+			int result = cartService.insertCart(cart);
+			redirectAttr.addFlashAttribute("msg", "정상적으로 저장했습니다.");
+			return "redirect:/item//paclist.bo";
+		}
 	
 	@GetMapping("/myCart.ca")
-	public String mycartList(@RequestParam String memId, Model model) {
-		List<CartList> cartList = cartService.mycartList(memId);
-		model.addAttribute("cartList", cartList);
-		return "/cart/mycartList";
-	}
+		public String mycartList(@RequestParam String memId, Model model) {
+			List<CartList> cartList = cartService.mycartList(memId);
+			model.addAttribute("cartList", cartList);
+			return "/cart/mycartList";
+		}
 	
 	@PostMapping("deleteCart.ca")
 	public String deleteCart(int cartNo,String memId, RedirectAttributes redirectAttr) {

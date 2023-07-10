@@ -7,9 +7,9 @@ import com.kh.finalProject.cart.model.vo.CartList;
 import com.kh.finalProject.item.model.vo.Item;
 
 public interface CartService {
-
-
-	int inserCart(Cart cart);
+	
+	/*리턴 값만 다르기 때문에 */
+	int insertCart(Cart cart);
 
 	List<CartList> mycartList(String memId);
 
