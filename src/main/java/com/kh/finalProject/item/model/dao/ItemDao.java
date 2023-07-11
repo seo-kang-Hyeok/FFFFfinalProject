@@ -27,6 +27,8 @@ public interface ItemDao {
 	List<Item> findItemsByCategory(String category);
 
 	int insertItem(Item item);
+	
+	int insertPac(Item item);
 
 	void deleteItem(int itemNo);
 

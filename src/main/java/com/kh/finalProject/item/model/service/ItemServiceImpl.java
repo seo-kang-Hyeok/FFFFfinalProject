@@ -32,20 +32,6 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public List<Item> findlist1() {
-		return itemDao.findlist1();
-	}
-
-	@Override
-	public List<Item> findlist2() {
-		return itemDao.findlist2();
-	}
-	@Override
-	public List<Item> findlist3() {
-		return itemDao.findlist3();
-	}
-
-	@Override
 	public Item selectOneitem(int itemNo) {
 		return itemDao.selectOneitem(itemNo);
 	}
@@ -55,15 +41,22 @@ public class ItemServiceImpl implements ItemService {
 		return itemDao.findItemsByCategory(category);
 	}
 
+	/* 상품등록 ITEM */
 	@Override
 	public int insertItem(Item item) {
 		return itemDao.insertItem(item);
+	}
+	/* 상품등록 Package */
+	@Override
+	public int insertPac(Item item) {
+		return itemDao.insertPac(item);
 	}
 
 	@Override
 	public void deleteItem(int itemNo) {
 		itemDao.deleteItem(itemNo);
 	}
+
 	
 
 }

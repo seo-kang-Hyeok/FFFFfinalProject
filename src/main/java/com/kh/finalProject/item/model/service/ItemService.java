@@ -12,12 +12,6 @@ public interface ItemService {
 
 	List<Item> selectitemList();
 
-	List<Item> findlist1();
-
-	List<Item> findlist2();
-
-	List<Item> findlist3();
-
 	Item selectOneitem(int itemNo);
 
 	List<Item> findItemsByCategory(String category);
@@ -25,6 +19,8 @@ public interface ItemService {
 	int insertItem(Item item);
 
 	void deleteItem(int itemNo);
+
+	int insertPac(Item item);
 
 	
 	//	List<Item> selectPackageList();

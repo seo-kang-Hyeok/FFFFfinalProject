@@ -16,7 +16,6 @@ public class CartList {
 	private String memId;
 	private int itemNo;
 	private int cartCount;
-	private int cartPrice;
 	private String itemSector;
 	private String itemName;
 	private int itemPrice;

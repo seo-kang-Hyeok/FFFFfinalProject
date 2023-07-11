@@ -47,14 +47,13 @@
 						<div class="info-area_title">
 							<span>수량</span>
 						</div>
-						<form name="frm">
 							<div class="info-area_number">
-								<input type="hidden" name="memId" value="${loginMember.memId}">					
-								<input type="hidden" name="itemNo" value="${itemForm.itemNo}">							
-								<input type="number" name="cartCount" min="0" max="${itemForm.itemLocal}" value="1" onchange="updateTotalPrice(this)">
-								<input type="hidden" name="cartPrice"  value="${itemForm.itemPrice}">							
+								<form name="cart">
+									<input type="hidden" name="memId" value="${loginMember.memId}">					
+									<input type="hidden" name="itemNo" value="${itemForm.itemNo}">							
+									<input type="number" name="cartCount" min="0" max="${itemForm.itemLocal}" value="1" onchange="updateTotalPrice(this)">
+								</form>
 							</div>
-						</form>
 					</div>
 					<div class="info-area_priceBox">
 						<div class="info-area_title">
@@ -63,13 +62,15 @@
 						<span class="total_price"><fmt:formatNumber value="${itemForm.itemPrice}" pattern="#,###"/>원</span>
 					</div>	
 					<div class="info-area_btn">
-							<button id="info-area_btn" onclick="inserCart()">장바구니</button>
+							<button id="info-area_btn" onclick="insertCart()">장바구니</button>
 					</div>
 				</div>
-			<form action="${pageContext.request.contextPath}/item/deleteItem.bo" method="post">
-				<input type="hidden" name="itemNo" value="${itemForm.itemNo}">
-				<button class="remove-button" type="submit">삭제하기</button>
-			</form>    
+				<c:if test="${ loginMember.admin =='1'}">
+					<form action="${pageContext.request.contextPath}/item/deleteItem.bo" method="post">
+						<input type="hidden" name="itemNo" value="${itemForm.itemNo}">
+						<button class="remove-button" type="submit">삭제하기</button>
+					</form>    
+		   		</c:if>
 			</div>
 			<div>
 			</div>
@@ -81,10 +82,10 @@
 
 <script>
 
-	const inserCart = () => {
-	    frm.method = 'post';
-	    frm.action = '${pageContext.request.contextPath}/cart/inserCart.ca';
-	    frm.submit();
+	const insertCart = () => {
+		cart.method = 'post';
+		cart.action = '${pageContext.request.contextPath}/cart/insertCart.ca';
+		cart.submit();
 	}
 
 	function updateTotalPrice(input) {

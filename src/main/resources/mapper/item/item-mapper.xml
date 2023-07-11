@@ -55,11 +55,27 @@
 		#{itemLogo}
 	)
 	</insert>
+
+	<insert id="insertPac">
+	insert into
+	  item
+	values (
+		sql_item_no.nextval,
+		#{itemSector},
+		#{itemName},
+		#{itemPrice},
+		#{itemContent},
+		#{itemLocal},
+		#{itemCount},
+		0,
+		#{itemLogo}
+	)
+	</insert>
 	
 	<!-- 삭제하기 -->
 	<delete id="deleteItem">
 	    DELETE
 	      FROM item 
 	     WHERE ITEM_NO = #{itemNo}
-</delete>
+	</delete>
 </mapper>
